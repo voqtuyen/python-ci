@@ -75,3 +75,8 @@ disallow_untyped_defs = true
 
 [tool.pydocstyle]
 convention = "google"
+
+[flake8]
+docstring-convention = "google"
+ignore = ["D100", "D104", "D105"]
+exclude = [".git", "__pycache__", "venv", ".venv"]

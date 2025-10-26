@@ -2,6 +2,7 @@
 
 
 class Calculator:
+
     """Calculator class with basic arithmetic operations."""
 
     def add(self, a: float, b: float) -> float:
@@ -13,6 +14,7 @@ class Calculator:
 
         Returns:
             float: The sum of two numbers
+
         """
         return a + b
 

@@ -59,9 +59,9 @@ jobs:
       run: |
         vulture src/ --min-confidence 80
 
-    - name: Check docstring style with pydocstyle
+    - name: Check docstring style with flake8-docstrings
       run: |
-        pydocstyle src/ --ignore=D100,D104,D105
+        flake8 src/ --select=D
 
     - name: Type check with mypy
       run: |
