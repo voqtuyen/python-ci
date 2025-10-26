@@ -1,7 +1,9 @@
 python-calculator Documentation
 ===============================
 
-Welcome to the python-calculator documentation.
+**Version:** 0.1.0
+
+A simple calculator with comprehensive testing and CI/CD
 
 .. toctree::
    :maxdepth: 2
