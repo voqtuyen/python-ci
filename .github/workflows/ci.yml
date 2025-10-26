@@ -59,6 +59,10 @@ jobs:
       run: |
         vulture src/ --min-confidence 80
 
+    - name: Check docstring coverage with darglint
+      run: |
+        darglint -r src/
+
     - name: Type check with mypy
       run: |
         mypy src/calculator.py --strict

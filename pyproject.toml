@@ -28,7 +28,12 @@ select = [
     "UP", # pyupgrade
     "D",  # pydocstyle (docstring format)
 ]
-ignore = ["E203", "D100", "D104"]
+ignore = [
+    "E203",
+    "D100",  # Missing docstring in public module
+    "D104",  # Missing docstring in public package
+    "D105",  # Missing docstring in magic method
+]
 
 [tool.ruff.lint.pydocstyle]
 convention = "google"
