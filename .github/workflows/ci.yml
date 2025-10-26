@@ -1,4 +1,4 @@
-name: Python CI - Code Quality Checks
+name: Code Quality Checks
 
 on:
   push:
@@ -8,7 +8,7 @@ on:
 
 jobs:
   test:
-    name: Test with Python 3.12
+    name: Unit testings with Python 3.12
     runs-on: ubuntu-latest
 
     steps:
