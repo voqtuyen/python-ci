@@ -61,7 +61,7 @@ jobs:
 
     - name: Check docstring coverage with darglint
       run: |
-        darglint -r src/
+        darglint src/**/*.py
 
     - name: Type check with mypy
       run: |
