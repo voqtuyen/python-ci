@@ -6,7 +6,7 @@ pytest-cov>=4.1.0
 ruff>=0.1.0
 vulture>=2.9.0
 mypy>=1.5.0
-interrogate>=1.5.0
+pydocstyle>=6.3.0
 
 # Security
 bandit>=1.7.5

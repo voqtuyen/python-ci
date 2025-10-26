@@ -59,9 +59,9 @@ jobs:
       run: |
         vulture src/ --min-confidence 80
 
-    - name: Check docstring coverage with interrogate
+    - name: Check docstring style with pydocstyle
       run: |
-        interrogate -vv src/ --fail-under=80
+        pydocstyle src/
 
     - name: Type check with mypy
       run: |
