@@ -26,8 +26,9 @@ select = [
     "B",  # flake8-bugbear
     "C4", # flake8-comprehensions
     "UP", # pyupgrade
+    "D",  # pydocstyle (docstring format)
 ]
-ignore = ["E203"]
+ignore = ["E203", "D100", "D104"]
 
 [tool.ruff.format]
 quote-style = "double"
