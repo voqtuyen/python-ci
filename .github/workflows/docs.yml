@@ -1,0 +1,40 @@
+name: Generate Documentation
+
+on:
+  push:
+    branches: [ master, main ]
+  pull_request:
+    types: [ closed ]
+    branches: [ master, main ]
+
+jobs:
+  docs:
+    name: Generate Documentation
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.pull_request.merged == true)
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        pip install sphinx sphinx-rtd-theme
+
+    - name: Generate HTML docs from docstrings
+      run: |
+        mkdir -p docs/source
+        python scripts/generate_docs.py
+        sphinx-build -b html docs/source docs/build/html
+
+    - name: Upload documentation artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: html-docs
+        path: docs/build/html/
