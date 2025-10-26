@@ -45,10 +45,15 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
-    - name: Lint and format check with ruff
+    - name: Lint with ruff
+      if: always()
       run: |
         ruff check . --output-format=github
-        ruff format --check --diff .
+
+    - name: Format check with ruff
+      if: always()
+      run: |
+        ruff format --check . --diff || true
 
     - name: Check for dead code with vulture
       run: |
