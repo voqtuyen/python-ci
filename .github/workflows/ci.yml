@@ -59,9 +59,9 @@ jobs:
       run: |
         vulture src/ --min-confidence 80
 
-    - name: Check docstring coverage with darglint
+    - name: Check docstring coverage with interrogate
       run: |
-        find src -name "*.py" -type f | xargs darglint
+        interrogate -vv src/ --fail-under=80
 
     - name: Type check with mypy
       run: |

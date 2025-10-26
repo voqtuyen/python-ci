@@ -17,11 +17,29 @@ class Calculator:
         return a + b
 
     def subtract(self, a: float, b: float) -> float:
-        """Subtract b from a."""
+        """Subtract b from a.
+
+        Args:
+            a: The first number (minuend)
+            b: The second number (subtrahend)
+
+        Returns:
+            float: The difference of a minus b
+
+        """
         return a - b
 
     def multiply(self, a: float, b: float) -> float:
-        """Multiply two numbers."""
+        """Multiply two numbers.
+
+        Args:
+            a: The first number
+            b: The second number
+
+        Returns:
+            float: The product of a and b
+
+        """
         return a * b
 
     def divide(self, a: float, b: float) -> float:
@@ -43,7 +61,16 @@ class Calculator:
         return a / b
 
     def power(self, a: float, b: float) -> float:
-        """Raise a to the power of b."""
+        """Raise a to the power of b.
+
+        Args:
+            a: The base number
+            b: The exponent
+
+        Returns:
+            float: The result of a raised to the power of b
+
+        """
         return float(a**b)
 
     def modulo(self, a: float, b: float) -> float:
