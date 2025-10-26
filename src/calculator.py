@@ -5,7 +5,15 @@ class Calculator:
     """Calculator class with basic arithmetic operations."""
 
     def add(self, a: float, b: float) -> float:
-        """Add two numbers."""
+        """Add two numbers.
+
+        Args:
+            a: The first number
+            b: The second number
+
+        Returns:
+            float: The sum of two numbers
+        """
         return a + b
 
     def subtract(self, a: float, b: float) -> float:
