@@ -53,7 +53,7 @@ jobs:
     - name: Format check with ruff
       if: always()
       run: |
-        ruff format --check . --diff || true
+        ruff format --check . --diff
 
     - name: Check for dead code with vulture
       run: |
@@ -62,7 +62,6 @@ jobs:
     - name: Type check with mypy
       run: |
         mypy src/calculator.py --strict
-      continue-on-error: true
 
   security:
     name: Security Scan
