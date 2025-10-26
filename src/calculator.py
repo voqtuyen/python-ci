@@ -1,6 +1,4 @@
-"""
-A simple calculator module with basic arithmetic operations.
-"""
+"""A simple calculator module with basic arithmetic operations."""
 
 
 class Calculator:
@@ -19,8 +17,7 @@ class Calculator:
         return a * b
 
     def divide(self, a: float, b: float) -> float:
-        """
-        Divide a by b.
+        """Divide a by b.
 
         Args:
             a: The dividend
@@ -41,8 +38,7 @@ class Calculator:
         return float(a**b)
 
     def modulo(self, a: float, b: float) -> float:
-        """
-        Return the remainder of a divided by b.
+        """Return the remainder of a divided by b.
 
         Args:
             a: The dividend

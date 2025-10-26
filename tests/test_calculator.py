@@ -1,6 +1,4 @@
-"""
-Unit tests for the Calculator class.
-"""
+"""Unit tests for the Calculator class."""
 
 import pytest
 
