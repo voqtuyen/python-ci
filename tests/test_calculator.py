@@ -3,6 +3,7 @@ Unit tests for the Calculator class.
 """
 
 import pytest
+
 from src.calculator import Calculator
 
 
