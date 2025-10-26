@@ -1,0 +1,7 @@
+API Reference
+=============
+
+.. automodule:: src.calculator
+   :members:
+   :undoc-members:
+   :show-inheritance:
