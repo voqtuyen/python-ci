@@ -6,9 +6,19 @@ from pathlib import Path
 docs_source = Path("docs/source")
 docs_source.mkdir(parents=True, exist_ok=True)
 
+# Create required subdirectories
+(docs_source / "_static").mkdir(exist_ok=True)
+(docs_source / "_templates").mkdir(exist_ok=True)
+
 # Create conf.py for Sphinx
 conf_py = docs_source / "conf.py"
 conf_py.write_text('''"""Sphinx configuration for python-calculator."""
+
+import sys
+from pathlib import Path
+
+# Add the project root to sys.path so autodoc can find the modules
+sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
 project = "python-calculator"
 author = "Your Name"
