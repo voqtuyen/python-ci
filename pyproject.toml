@@ -75,4 +75,3 @@ disallow_untyped_defs = true
 
 [tool.pydocstyle]
 convention = "google"
-ignore = ["D100", "D104", "D105"]

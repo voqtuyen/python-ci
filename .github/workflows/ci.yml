@@ -61,7 +61,7 @@ jobs:
 
     - name: Check docstring style with pydocstyle
       run: |
-        pydocstyle src/
+        pydocstyle src/ --ignore=D100,D104,D105
 
     - name: Type check with mypy
       run: |
