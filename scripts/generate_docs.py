@@ -1,5 +1,4 @@
 """Generate Sphinx documentation from Python docstrings."""
-
 from pathlib import Path
 
 # Create docs/source directory structure
