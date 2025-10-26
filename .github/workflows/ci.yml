@@ -82,10 +82,8 @@ jobs:
 
     - name: Security check with bandit
       run: |
-        bandit -r . -f json -o bandit-report.json || true
-        bandit -r . --severity-level medium
+        bandit -r src/ --severity-level medium --exclude tests/,scripts/
 
     - name: Check for known vulnerabilities with safety
       run: |
-        safety check --json || true
-      continue-on-error: true
+        safety check
