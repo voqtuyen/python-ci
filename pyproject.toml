@@ -30,6 +30,9 @@ select = [
 ]
 ignore = ["E203", "D100", "D104"]
 
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
 [tool.ruff.format]
 quote-style = "double"
 indent-style = "space"
