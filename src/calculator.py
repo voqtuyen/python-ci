@@ -28,6 +28,7 @@ class Calculator:
 
         Raises:
             ValueError: If b is zero
+
         """
         if b == 0:
             raise ValueError("Cannot divide by zero")
@@ -49,6 +50,7 @@ class Calculator:
 
         Raises:
             ValueError: If b is zero
+
         """
         if b == 0:
             raise ValueError("Cannot perform modulo with zero divisor")
