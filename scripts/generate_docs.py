@@ -1,10 +1,16 @@
 """Generate Sphinx documentation from Python docstrings."""
 
 from pathlib import Path
+import shutil
 
 # Create docs/source directory structure
 docs_source = Path("docs/source")
 docs_source.mkdir(parents=True, exist_ok=True)
+
+# Remove old modules.rst if it exists
+old_modules = docs_source / "modules.rst"
+if old_modules.exists():
+    old_modules.unlink()
 
 # Create required subdirectories
 (docs_source / "_static").mkdir(exist_ok=True)
