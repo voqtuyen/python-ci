@@ -6,10 +6,12 @@ on:
   pull_request:
     branches: [ master, main, develop ]
 
+
 jobs:
   test:
     name: Unit testings with Python 3.12
     runs-on: ubuntu-latest
+    needs: lint
 
     steps:
     - uses: actions/checkout@v4
@@ -48,7 +50,7 @@ jobs:
     - name: Lint with ruff
       if: always()
       run: |
-        ruff check . --output-format=github
+        ruff check . --output-format github
 
     - name: Format check with ruff
       if: always()
@@ -56,14 +58,17 @@ jobs:
         ruff format --check . --diff
 
     - name: Check for dead code with vulture
+      if: always()
       run: |
         vulture src/ --min-confidence 80
 
     - name: Check docstring style with flake8-docstrings
+      if: always()
       run: |
         flake8 src/ --select=D
 
     - name: Type check with mypy
+      if: always()
       run: |
         mypy src/calculator.py --strict
 
@@ -85,9 +90,11 @@ jobs:
         pip install -r requirements.txt
 
     - name: Security check with bandit
+      if: always()
       run: |
-        bandit -r src/ --severity-level medium --exclude tests/,scripts/
+        bandit -r src/ -ll
 
     - name: Check for known vulnerabilities with safety
+      if: always()
       run: |
         safety check
