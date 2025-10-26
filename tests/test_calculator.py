@@ -103,7 +103,7 @@ class TestCalculator:
     def test_power_fractional_exponent(self, calc):
         """Test raising to fractional powers."""
         assert calc.power(4, 0.5) == 2.0
-        assert calc.power(27, 1/3) == pytest.approx(3.0)
+        assert calc.power(27, 1 / 3) == pytest.approx(3.0)
 
     def test_modulo_positive_numbers(self, calc):
         """Test modulo operation with positive numbers."""

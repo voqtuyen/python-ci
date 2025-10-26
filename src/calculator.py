@@ -38,7 +38,7 @@ class Calculator:
 
     def power(self, a: float, b: float) -> float:
         """Raise a to the power of b."""
-        return a ** b
+        return a**b
 
     def modulo(self, a: float, b: float) -> float:
         """
