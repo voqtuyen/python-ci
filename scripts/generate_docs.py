@@ -29,7 +29,7 @@ html_static_path = ["_static"]
 
 # Create index.rst
 index_rst = docs_source / "index.rst"
-index_rst.write_text('''python-calculator Documentation
+index_rst.write_text("""python-calculator Documentation
 ===============================
 
 Welcome to the python-calculator documentation.
@@ -62,6 +62,6 @@ modules_rst.write_text('''API Reference
    :members:
    :undoc-members:
    :show-inheritance:
-''')
+""")
 
 print("Documentation source files generated successfully!")
