@@ -49,7 +49,7 @@ Welcome to the python-calculator documentation.
    :maxdepth: 2
    :caption: Contents:
 
-   modules
+   api
 
 Indices and tables
 ==================
@@ -57,17 +57,12 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
-''')
+""")
 
-# Create modules.rst for autodoc
-modules_rst = docs_source / "modules.rst"
-modules_rst.write_text('''API Reference
+# Create api.rst for autodoc
+api_rst = docs_source / "api.rst"
+api_rst.write_text("""API Reference
 =============
-
-.. autosummary::
-   :toctree: generated
-
-   calculator
 
 .. automodule:: src.calculator
    :members:
